@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "386880120260",
+    "project_id": "cinthia-2fb24",
+    "storage_bucket": "cinthia-2fb24.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:386880120260:android:4ff65258de5ebc44383091",
+        "android_client_info": {
+          "package_name": "com.example.projectv1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "386880120260-lv3agomvqt7ctlskspuhtlmj6132c620.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQFNYHXKu0HRG9bnswG-cUv2TpgSznEnk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "386880120260-lv3agomvqt7ctlskspuhtlmj6132c620.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
