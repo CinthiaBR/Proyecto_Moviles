@@ -25,6 +25,11 @@ class RegistrarUsuario : AppCompatActivity() {
             registrarUsuario()
 
         }
+        val botonCancelarRegistro = findViewById<Button>(R.id.btn_cancelar_registroUsuario)
+        botonCancelarRegistro.setOnClickListener {
+
+            abrirActividad(MainActivity::class.java)
+        }
 
     }
     fun registrarUsuario() {
@@ -43,23 +48,23 @@ class RegistrarUsuario : AppCompatActivity() {
             etNombre.setError("El nombre es necesario")
         }
         if (correoUsuario.isEmpty()) {
-            etNombre.setError("El correo es necesario")
+            emailUsuario.setError("El correo es necesario")
         }
 
         if (Fecha.isEmpty()) {
-            Fecha.setError("La fecha es necesaria")
+            txtFecha.setError("La fecha es necesaria")
         }
         if (Password.isEmpty()) {
-            Password.setError("La clave es necesaria")
+            editTextTextPassword.setError("La clave es necesaria")
         }
         if (Password2.isEmpty()) {
-            Password2.setError("Es necesario confirmar la clave")
+            editTextTextPassword.setError("Es necesario confirmar la clave")
         }
         if (Password.length < 6) {
 
         }
         if (Password2 != Password) {
-            Password2.setError("Las contraseñas no coinsiden")
+            editTextTextPassword2.setError("Las contraseñas no coinsiden")
         }
         progressBar.setVisibility(View.VISIBLE)
         Auth.createUserWithEmailAndPassword(correoUsuario,Password)
@@ -74,7 +79,7 @@ class RegistrarUsuario : AppCompatActivity() {
                                 if(task.isSuccessful()){
                                     Toast.makeText(this, "USUARIO REGISTRADO EXITOSAMENTE",Toast.LENGTH_LONG).show();
                                     progressBar.setVisibility(View.VISIBLE);
-                                    //DIRIGIR A LA VENTANA INICIO
+                                    //DIRIGIR A LA VENTANA LOGIN
                                     abrirActividad(MainActivity::class.java)
 
                                 }else{
@@ -102,6 +107,4 @@ class RegistrarUsuario : AppCompatActivity() {
 }
 
 
-private fun String.setError(s: String) {
 
-}
