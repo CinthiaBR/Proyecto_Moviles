@@ -114,6 +114,8 @@
         android:layout_width="301dp"
         android:layout_height="51dp"
         android:layout_marginTop="24dp"
+        android:clickable="true"
+        android:focusable="false"
         android:ems="10"
         android:hint="Fecha de nacimiento"
         android:inputType="textPersonName"
