@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".RegistrarUsuario">
 
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="181dp"
@@ -35,12 +34,12 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/edi_nombreUsuario"
+        android:id="@+id/edi_correo"
         android:layout_width="301dp"
         android:layout_height="51dp"
         android:layout_marginTop="32dp"
         android:ems="10"
-        android:hint="Nombre de usuario"
+        android:hint="Correo"
         android:inputType="textPersonName"
         android:textColor="#707070"
         app:layout_constraintEnd_toEndOf="@+id/etNombre"
@@ -49,29 +48,15 @@
         app:layout_constraintTop_toBottomOf="@+id/etNombre" />
 
     <EditText
-        android:id="@+id/txtFecha"
-        android:layout_width="301dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="32dp"
-        android:clickable="true"
-        android:ems="10"
-        android:focusable="false"
-        android:hint="Fecha de nacimiento"
-        android:inputType="date"
-        app:layout_constraintEnd_toEndOf="@+id/edi_nombreUsuario"
-        app:layout_constraintHorizontal_bias="0.481"
-        app:layout_constraintStart_toStartOf="@+id/edi_nombreUsuario"
-        app:layout_constraintTop_toBottomOf="@+id/edi_nombreUsuario" />
-
-    <EditText
         android:id="@+id/editTextTextPassword"
         android:layout_width="301dp"
         android:layout_height="51dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
         android:hint="Contraseña"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="@+id/txtFecha"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/txtFecha"
         app:layout_constraintTop_toBottomOf="@+id/txtFecha" />
 
@@ -90,7 +75,7 @@
 
 
     <Button
-        android:id="@+id/btn_registrar_usuario"
+        android:id="@+id/btn_ingresarUsuario"
         android:layout_width="168dp"
         android:layout_height="66dp"
         android:layout_marginEnd="16dp"
@@ -124,18 +109,27 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2"
         app:layout_constraintVertical_bias="0.623" />
 
+    <EditText
+        android:id="@+id/txtFecha"
+        android:layout_width="301dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Fecha de nacimiento"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/edi_correo"
+        app:layout_constraintStart_toStartOf="@+id/edi_correo"
+        app:layout_constraintTop_toBottomOf="@+id/edi_correo" />
+
     <ProgressBar
-        android:id="@+id/progressBar2"
+        android:id="@+id/pgb_registrar"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="invisible"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.455" />
-
+        app:layout_constraintEnd_toEndOf="@+id/txtFecha"
+        app:layout_constraintStart_toStartOf="@+id/txtFecha"
+        app:layout_constraintTop_toBottomOf="@+id/txtFecha" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
