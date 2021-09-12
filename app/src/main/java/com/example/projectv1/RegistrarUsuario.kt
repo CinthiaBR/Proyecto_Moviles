@@ -44,8 +44,7 @@ class RegistrarUsuario : AppCompatActivity() {
         val progressBar: ProgressBar = findViewById<ProgressBar>(R.id.pgb_registrar)
         val Nombre = etNombre.getText().toString().trim()
         val correoUsuario = emailUsuario.getText().toString().trim()
-        val Fecha = txtFecha.text.toString()
-        //val Fecha = txtFecha.getText().toString().trim()
+        val Fecha = txtFecha.getText().toString().trim()
         val Password = editTextTextPassword.getText().toString().trim()
         val Password2 = editTextTextPassword2.getText().toString().trim()
         if (Nombre.isEmpty()) {
