@@ -11,6 +11,7 @@ import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
 import android.text.style.StyleSpan
 import android.util.Log
+import android.view.Window
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -25,16 +26,18 @@ class NuevaTarea : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        requestWindowFeature(Window.FEATURE_NO_TITLE)
+        getSupportActionBar()?.hide()
         setContentView(R.layout.activity_nueva_tarea)
 
         val botonHoraTarea = findViewById<EditText>(R.id.btn_HoraRecordatorio)
         fechaTarea = findViewById(R.id.btn_fechaTarea)
-
         fechaTarea.setOnClickListener{ShowDatePickerDialog()}
+
         prioridad=findViewById(R.id.btn_PrioridadTarea)
         prioridad .setOnClickListener{withItems()}
-        val NombreTarea=findViewById<EditText>(R.id.txtNombreTarea)
 
+        val NombreTarea=findViewById<EditText>(R.id.txtNombreTarea)
         botonHoraTarea. setOnClickListener {
             val cal = Calendar.getInstance()
             val timeSetListener = TimePickerDialog.OnTimeSetListener { timePicker, hour, minute ->
@@ -55,6 +58,12 @@ class NuevaTarea : AppCompatActivity() {
         Categoria .setOnClickListener {
             abrirActividad(categoriasTarea::class.java)
         }
+
+        val Colaboradores= findViewById<TextView>(R.id.et_colaboradores)
+        Colaboradores .setOnClickListener {
+            abrirActividad(ColaboradoresTarea::class.java)
+        }
+
         val btnConfirmar = findViewById<Button>(R.id.btn_confirmarTarea)
         btnConfirmar .setOnClickListener {
             val categoriaTarea = categoriasTarea.CategoriaTarea
@@ -67,7 +76,8 @@ class NuevaTarea : AppCompatActivity() {
             println("$horaTarea")
             val PrioridadTarea = prioridad.text.toString()
             println("$PrioridadTarea")
-
+            val getColaboradores = ColaboradoresTarea.Colaboradores
+            println("$getColaboradores")
 
             /*if (nombreT.isEmpty() ||fechaT.isEmpty() || horaTarea.isEmpty() || PrioridadTarea.isEmpty() ) {
                 Toast.makeText(this, "Llene todos los datos", Toast.LENGTH_LONG).show()

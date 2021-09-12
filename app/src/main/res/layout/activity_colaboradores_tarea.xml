@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context=".ColaboradoresTarea">
+
+    <Button
+        android:id="@+id/btnConfColaboradores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:text="cancelar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnConfirmarcolaboradores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="116dp"
+        android:text="confirmar"
+        app:layout_constraintBottom_toBottomOf="@+id/btnConfColaboradores"
+        app:layout_constraintStart_toEndOf="@+id/btnConfColaboradores"
+        app:layout_constraintTop_toTopOf="@+id/btnConfColaboradores" />
+
+    <CheckBox
+        android:id="@+id/ch1"
+        android:layout_width="198dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="84dp"
+        android:text="Mamá"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.258"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/ch2"
+        android:layout_width="198dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:text="Papá"
+        app:layout_constraintEnd_toEndOf="@+id/ch1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ch1"
+        app:layout_constraintTop_toBottomOf="@+id/ch1" />
+
+    <CheckBox
+        android:id="@+id/ch3"
+        android:layout_width="198dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:text="Hijos"
+        app:layout_constraintEnd_toEndOf="@+id/ch2"
+        app:layout_constraintStart_toStartOf="@+id/ch2"
+        app:layout_constraintTop_toBottomOf="@+id/ch2" />
+
+    <CheckBox
+        android:id="@+id/ch4"
+        android:layout_width="198dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:text="Tío"
+        app:layout_constraintEnd_toEndOf="@+id/ch3"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/ch3"
+        app:layout_constraintTop_toBottomOf="@+id/ch3" />
+
+    <CheckBox
+        android:id="@+id/ch5"
+        android:layout_width="198dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:text="Primos"
+        app:layout_constraintEnd_toEndOf="@+id/ch4"
+        app:layout_constraintStart_toStartOf="@+id/ch4"
+        app:layout_constraintTop_toBottomOf="@+id/ch4" />
+
+    <CheckBox
+        android:id="@+id/ch6"
+        android:layout_width="198dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:text="Otros"
+        app:layout_constraintEnd_toEndOf="@+id/ch5"
+        app:layout_constraintStart_toStartOf="@+id/ch5"
+        app:layout_constraintTop_toBottomOf="@+id/ch5" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="¿Con quién vas a realizar la tarea?"
+        android:textColor="#00BCD4"
+        android:textColorHint="#59D0DF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_otros"
+        android:layout_width="305dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="120dp"
+        android:ems="10"
+        android:hint="¿Quienes?"
+        android:inputType="textPersonName"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

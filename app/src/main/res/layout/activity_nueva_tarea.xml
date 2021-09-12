@@ -10,13 +10,13 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="4dp"
         android:text="Nueva Tarea"
         android:textColor="#00D9C4"
         android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.154"
+        app:layout_constraintHorizontal_bias="0.093"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -105,22 +105,22 @@
             android:textStyle="normal" />
 
         <TextView
-            android:id="@+id/textView8"
+            android:id="@+id/et_colaboradores"
             android:layout_width="wrap_content"
             android:layout_height="45dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Tarea"
+            android:text="Colaboradores"
             android:textColor="#000000"
             android:textSize="20sp" />
 
         <ImageButton
             android:id="@+id/imageButton2"
-            android:layout_width="46dp"
+            android:layout_width="wrap_content"
             android:layout_height="45dp"
             android:layout_weight="1"
             android:background="@color/white"
-            app:srcCompat="@android:drawable/ic_menu_recent_history"
+            app:srcCompat="@drawable/ic_baseline_people_24"
             app:tint="#000000" />
     </LinearLayout>
 
