@@ -14,11 +14,12 @@ import com.google.firebase.database.FirebaseDatabase
 
 class RegistrarUsuario : AppCompatActivity() {
     private lateinit var Auth: FirebaseAuth
-
+    private lateinit var txtFecha: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registrar_usuario)
+
         Auth = FirebaseAuth.getInstance();
         val botonRegistrarUsuario = findViewById<Button>(R.id.btn_ingresarUsuario)
         botonRegistrarUsuario.setOnClickListener {
@@ -30,18 +31,21 @@ class RegistrarUsuario : AppCompatActivity() {
 
             abrirActividad(MainActivity::class.java)
         }
+        txtFecha = findViewById(R.id.txtFecha)
+        txtFecha.setOnClickListener{ShowDatePickerDialog()}
 
     }
+
     fun registrarUsuario() {
         var etNombre = findViewById<EditText>(R.id.etNombre)
         val emailUsuario = findViewById<EditText>(R.id.edi_correo)
-        val txtFecha = findViewById<EditText>(R.id.txtFecha)
         val editTextTextPassword = findViewById<EditText>(R.id.editTextTextPassword)
         val editTextTextPassword2 = findViewById<EditText>(R.id.editTextTextPassword2)
         val progressBar: ProgressBar = findViewById<ProgressBar>(R.id.pgb_registrar)
         val Nombre = etNombre.getText().toString().trim()
         val correoUsuario = emailUsuario.getText().toString().trim()
-        val Fecha = txtFecha.getText().toString().trim()
+        val Fecha = txtFecha.text.toString()
+        //val Fecha = txtFecha.getText().toString().trim()
         val Password = editTextTextPassword.getText().toString().trim()
         val Password2 = editTextTextPassword2.getText().toString().trim()
         if (Nombre.isEmpty()) {
@@ -110,6 +114,15 @@ class RegistrarUsuario : AppCompatActivity() {
 
 }
 
+    }
+
+    fun ShowDatePickerDialog() {
+        val datePicker = DatePickerFragment{ day, month, year -> OnDateSelected(day, month, year)}
+        datePicker.show(supportFragmentManager, "datePcker")
+    }
+
+    fun OnDateSelected(day:Int, month:Int, year:Int){
+        txtFecha.setText("${day}/${month}/${year}")
     }
     fun abrirActividad(clase: Class<*>){
         val intentExplicito = Intent(

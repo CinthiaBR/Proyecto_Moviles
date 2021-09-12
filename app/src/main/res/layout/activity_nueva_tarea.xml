@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NuevaTarea">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Nueva Tarea"
+        android:textColor="#00D9C4"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.154"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtNombreTarea"
+        android:layout_width="350dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Tarea"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/id_cancelarTarea"
+        android:layout_width="168dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginBottom="56dp"
+        android:backgroundTint="#A9F1E5"
+        android:drawableStart="@drawable/estilo_borde_circular"
+        android:text="CANCELAR"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btn_confirmarTarea"
+        android:layout_width="168dp"
+        android:layout_height="66dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="56dp"
+        android:backgroundTint="#00D9C4"
+        android:drawableStart="@drawable/estilo_borde_circular"
+        android:text="CONFIRMAR"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toEndOf="@+id/id_cancelarTarea"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="374dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/estilo_borde"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/txtNombreTarea"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="@+id/txtNombreTarea"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreTarea">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="35dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            app:srcCompat="@android:drawable/ic_dialog_dialer"
+            app:tint="#000000" />
+
+        <TextView
+            android:id="@+id/txtCat"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Categoría"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Tarea"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="46dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            app:srcCompat="@android:drawable/ic_menu_recent_history"
+            app:tint="#000000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="374dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/estilo_borde"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout4"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+        <ImageButton
+            android:id="@+id/imageButton5"
+            android:layout_width="35dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            app:srcCompat="@drawable/ic_baseline_notifications_24"
+            app:tint="#000000" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Recordatorio"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+
+        <EditText
+            android:id="@+id/btn_HoraRecordatorio"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@drawable/estilo_bordes"
+            android:text="hh:mm"
+            android:clickable="true"
+            android:focusable="false"
+            android:gravity="center"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="374dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/estilo_borde"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <ImageButton
+            android:id="@+id/imageButton7"
+            android:layout_width="35dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            app:srcCompat="@android:drawable/stat_sys_upload"
+            app:tint="#000000" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Prioridad"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/btn_PrioridadTarea"
+            android:layout_width="79dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@drawable/estilo_bordes"
+            android:clickable="true"
+            android:ems="10"
+            android:focusable="false"
+            android:gravity="center"
+            android:inputType="date"
+            android:text="Normal"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="374dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/estilo_borde"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="35dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            app:srcCompat="@drawable/ic_baseline_today_24"
+            app:tint="#000000" />
+
+        <TextView
+            android:id="@+id/txtFechaTarea"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Fecha"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+
+        <EditText
+            android:id="@+id/btn_fechaTarea"
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:background="@drawable/estilo_bordes"
+            android:clickable="true"
+            android:ems="10"
+            android:focusable="false"
+            android:gravity="center"
+            android:inputType="date"
+            android:text="Hoy"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
