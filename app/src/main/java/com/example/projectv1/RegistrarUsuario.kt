@@ -46,25 +46,40 @@ class RegistrarUsuario : AppCompatActivity() {
         val Password2 = editTextTextPassword2.getText().toString().trim()
         if (Nombre.isEmpty()) {
             etNombre.setError("El nombre es necesario")
+            etNombre.requestFocus()
+            return
         }
         if (correoUsuario.isEmpty()) {
             emailUsuario.setError("El correo es necesario")
+            emailUsuario.requestFocus()
+            return
         }
 
         if (Fecha.isEmpty()) {
             txtFecha.setError("La fecha es necesaria")
+            txtFecha.requestFocus()
+            return
         }
         if (Password.isEmpty()) {
             editTextTextPassword.setError("La clave es necesaria")
+            editTextTextPassword.requestFocus()
+            return
         }
         if (Password2.isEmpty()) {
             editTextTextPassword.setError("Es necesario confirmar la clave")
+            editTextTextPassword2.requestFocus()
+            return
         }
         if (Password.length < 6) {
+            editTextTextPassword.setError("La contraseña debe contener almenos 6 caracteres")
+            editTextTextPassword.requestFocus()
+            return
 
         }
         if (Password2 != Password) {
             editTextTextPassword2.setError("Las contraseñas no coinsiden")
+            editTextTextPassword2.requestFocus()
+            return
         }
         progressBar.setVisibility(View.VISIBLE)
         Auth.createUserWithEmailAndPassword(correoUsuario,Password)
