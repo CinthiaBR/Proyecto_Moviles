@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectV1">
-        <activity android:name=".Inicio"></activity>
+        <activity android:name=".NuevaTarea"></activity>
+        <activity android:name=".Habitos" />
+        <activity android:name=".FrecuenciaHabito" />
+        <activity android:name=".DefinirHabito" />
+        <activity android:name=".CuandoQuieresHacerlo" />
+        <activity android:name=".categoriasTarea" />
+        <activity android:name=".categoriasHabitos" />
+        <activity android:name=".Inicio" />
         <activity android:name=".RegistrarUsuario" />
         <activity android:name=".MainActivity">
             <intent-filter>
