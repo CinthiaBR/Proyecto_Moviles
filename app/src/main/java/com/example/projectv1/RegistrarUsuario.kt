@@ -31,14 +31,14 @@ class RegistrarUsuario : AppCompatActivity() {
 
             abrirActividad(MainActivity::class.java)
         }
+        txtFecha = findViewById(R.id.txtFecha)
+        txtFecha.setOnClickListener{ShowDatePickerDialog()}
 
     }
 
     fun registrarUsuario() {
         var etNombre = findViewById<EditText>(R.id.etNombre)
         val emailUsuario = findViewById<EditText>(R.id.edi_correo)
-        txtFecha = findViewById(R.id.txtFecha)
-        txtFecha.setOnClickListener{ShowDatePickerDialog()}
         val editTextTextPassword = findViewById<EditText>(R.id.editTextTextPassword)
         val editTextTextPassword2 = findViewById<EditText>(R.id.editTextTextPassword2)
         val progressBar: ProgressBar = findViewById<ProgressBar>(R.id.pgb_registrar)
