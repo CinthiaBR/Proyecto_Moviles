@@ -14,7 +14,7 @@ class Inicio : AppCompatActivity() {
         val btnTarea = findViewById<Button>(R.id.btn_TA)
 
         btnHabitos.setOnClickListener { abrirActividad(categoriasHabitos::class.java) }
-        btnTarea.setOnClickListener { abrirActividad(categoriasTarea::class.java) }
+        btnTarea.setOnClickListener { abrirActividad(NuevaTarea::class.java) }
 
 
     }

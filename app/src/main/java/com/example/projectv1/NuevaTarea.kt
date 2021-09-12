@@ -10,11 +10,7 @@ import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
 import android.text.style.StyleSpan
-import android.util.Log
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import java.util.*
 
@@ -51,8 +47,12 @@ class NuevaTarea : AppCompatActivity() {
             ).show()
         }
 
-        val Categoria= findViewById<TextView>(R.id.txtCat)
+        val Categoria= findViewById<TextView>(R.id.txt_categoria)
         Categoria .setOnClickListener {
+            abrirActividad(categoriasTarea::class.java)
+        }
+        val iconoCategoria= findViewById<ImageButton>(R.id.ib_categoria)
+        iconoCategoria .setOnClickListener {
             abrirActividad(categoriasTarea::class.java)
         }
         val btnConfirmar = findViewById<Button>(R.id.btn_confirmarTarea)
