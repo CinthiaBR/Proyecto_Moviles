@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CuandoQuieresHacerlo">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="¿Cuándo quieres hacerlo?"
+        android:textColor="#00D9C4"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="370dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/estilo_borde"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintHorizontal_bias="0.277"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+        <androidx.constraintlayout.utils.widget.ImageFilterButton
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:src="@drawable/ic_baseline_date_range_24" />
+
+        <TextView
+            android:layout_width="180dp"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:text="Fecha de inicio"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/btn_fechaTarea"
+            android:layout_width="120dp"
+            android:layout_height="45dp"
+            android:clickable="true"
+            android:ems="10"
+            android:focusable="false"
+            android:gravity="center"
+            android:inputType="date"
+            android:text="Hoy"
+            android:background="@drawable/estilo_bordes"
+            android:layout_marginLeft="5dp"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayouts"
+        android:layout_width="370dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/estilo_borde"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <androidx.constraintlayout.utils.widget.ImageFilterButton
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:src="@drawable/ic_baseline_today_24" />
+
+        <TextView
+            android:layout_width="223dp"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:text="Fecha objetivo"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayouts1"
+        android:layout_width="370dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/estilo_borde"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayouts"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/linearLayouts"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayouts">
+
+        <EditText
+            android:id="@+id/txtFecha2"
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:clickable="true"
+            android:ems="10"
+            android:focusable="false"
+            android:gravity="center"
+            android:inputType="date"
+            android:text="dd/mm/aaa"
+            android:background="@drawable/estilo_bordes"
+            android:layout_marginLeft="5dp"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginLeft="7dp"/>
+
+        <TextView
+            android:layout_width="65dp"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:text="días."
+            android:textColor="#000000"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutk"
+        android:layout_width="370dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/estilo_borde"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayouts1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/linearLayouts1"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayouts1">
+
+        <androidx.constraintlayout.utils.widget.ImageFilterButton
+            android:id="@+id/icRecordatorio"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:src="@drawable/ic_baseline_notifications_24" />
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:text="Recordatorio"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/EtHora"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="7dp"
+            android:background="@drawable/estilo_borde_circular"
+            android:clickable="true"
+            android:focusable="false"
+            android:gravity="center"
+            android:text="Hora" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutd"
+        android:layout_width="370dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/estilo_borde"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayoutk"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="@+id/linearLayoutk"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutk">
+
+        <androidx.constraintlayout.utils.widget.ImageFilterButton
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:src="@drawable/ic_baseline_arrow_upward_24" />
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:layout_marginRight="45dp"
+            android:gravity="center"
+            android:text="Prioridad"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/txtPrioridad"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:background="@drawable/estilo_bordes"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="false"
+            android:text="Normal" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_cancelarCuando"
+        android:layout_width="160dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="#A9F1E5"
+        android:drawableStart="@drawable/estilo_borde_circular"
+        android:text="cancelar"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/linearLayoutd" />
+
+    <Button
+        android:id="@+id/btn_confirmarCuando"
+        android:layout_width="173dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="40dp"
+        android:drawableStart="@drawable/estilo_borde_circular"
+        android:text="confirmar"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayoutd"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btn_cancelarCuando" />
+</androidx.constraintlayout.widget.ConstraintLayout>
