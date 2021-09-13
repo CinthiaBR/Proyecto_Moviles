@@ -3,6 +3,7 @@ package com.example.projectv1
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.view.Window
 import android.widget.Button
 import android.widget.CheckBox
@@ -42,6 +43,9 @@ class ColaboradoresTarea : AppCompatActivity() {
         btnCancelar.setOnClickListener {
             Colaboradores = "Sin Colaboradores"
             abrirActividad(NuevaTarea::class.java)}
+        ch6.setOnCheckedChangeListener{_, isChecked -> edOtros.isEnabled = isChecked
+        }
+
 
         btnConfirmar.setOnClickListener {
             if(ch1.isChecked){
@@ -51,17 +55,15 @@ class ColaboradoresTarea : AppCompatActivity() {
                 chB = "Papá\n"
             }
             if(ch3.isChecked){
-                 chC = "Hijos\n"
+                chC = "Hijos\n"
             }
             if(ch4.isChecked){
-                 chD = "Tío\n"
+                chD = "Tío\n"
             }
             if(ch5.isChecked){
-                 chE = "Primo\n"
+                chE = "Primo\n"
             }
-            if(ch6.isChecked){
-                 chF = edOtros.text.toString()
-            }
+            chF = edOtros.text.toString()
             Colaboradores = chA+chB+chC+chD+chE+chF
             abrirActividad(NuevaTarea::class.java) }
 
